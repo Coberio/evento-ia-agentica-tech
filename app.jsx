@@ -662,9 +662,7 @@ function Footer({ vertical }) {
           <div>
             <h5>Contacto</h5>
             <ul>
-              <li><a href="mailto:kaajal@inteligenciaartificialagentica.com">Kaajal Mansukhani</a></li>
-              <li><a href="mailto:juanmi@segurosia.com">Juanmi López</a></li>
-              <li><a href="mailto:hola@inteligenciaartificialagentica.com">hola@…</a></li>
+              <li><a href="mailto:hola@inteligenciaartificialagentica.com">hola@inteligenciaartificialagentica.com</a></li>
             </ul>
           </div>
         </div>
