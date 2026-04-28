@@ -4,19 +4,25 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
-<title>Sponsorship Tech · I Foro IA Agéntica 2026</title>
-<meta name="description" content="Patrocinio tecnológico del I Foro de IA Agéntica para el sector financiero y asegurador." />
+<title>Sponsorship Tecnología · I Foro IA Agéntica 2026</title>
+<meta name="description" content="Participación institucional de proveedores tecnológicos en el I Foro de IA Agéntica 2026: donde los compradores del sector financiero y asegurador se sientan a escuchar." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Figtree:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" />
 <link rel="stylesheet" href="styles.css" />
 <style>
   :root {
     --accent: #00f0d4;
-    --accent-soft: rgba(0, 240, 212, 0.12);
+    --accent-soft: rgba(0, 240, 212, 0.13);
     --accent-glow: rgba(0, 240, 212, 0.28);
-    --accent-ink: #04161a;
+    --accent-ink: #00191b;
+    --bg-0: #05070a;
+    --bg-1: #0a0d12;
   }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Saltar al contenido</a>
 <div id="root"></div>
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
@@ -24,25 +30,24 @@
 <script>
   window.VERTICAL = {
     key: 'tech',
-    label: 'Tech',
-    preTitle: '// sponsorship.tech · v2026',
-    tierLabel: 'Tech',
-    tierNames: ['GOLD', 'SILVER', 'BRONZE'],
+    label: 'Tecnología',
+    preTitle: 'Participación Institucional · Tecnología · 2026',
+    tierLabel: 'Tecnología',
+    tierNames: ['IMPULSORA', 'COLABORADORA', 'PARTICIPANTE'],
     tiers: [
-      { name: 'Gold',   total: 2, remaining: 2, price: 9000 },
-      { name: 'Silver', total: 4, remaining: 3, price: 6000 },
-      { name: 'Bronze', total: 6, remaining: 5, price: 3000 }
+      { name: 'Entidad Impulsora',     total: 3, remaining: 2, price: 12000 },
+      { name: 'Entidad Colaboradora',  total: 5, remaining: 3, price: 6000  },
+      { name: 'Entidad Participante',  total: 8, remaining: 8, price: 0     }
     ]
   };
 </script>
 <script type="text/babel" src="app.jsx"></script>
 <script type="text/babel">
-
-const vertical = Object.assign({}, window.VERTICAL, {
-  heroTitle: <>Patrocina el <em>primer Foro</em> de IA Agéntica en Banca y Seguros.</>,
-  heroSub: 'Posiciona tu empresa tecnológica ante 150 CIOs, CDOs y Chief AI Officers de banca y seguros. El primer foro en España exclusivo de IA Agéntica en el sector financiero.'
-});
-ReactDOM.createRoot(document.getElementById('root')).render(<Page vertical={vertical} />);
+  const vertical = Object.assign({}, window.VERTICAL, {
+    heroTitle: <>Donde tu tecnología se <em>mide ante quienes la van a comprar</em>.</>,
+    heroSub: 'El único foro en España donde los proveedores de IA Agéntica entran en conversación directa con los compradores del sector financiero y asegurador. Sin stands, sin pitches: la audiencia está aquí precisamente por eso. 150 C-level · Regla Chatham House · Aforo curado.'
+  });
+  ReactDOM.createRoot(document.getElementById('root')).render(<Page vertical={vertical} />);
 </script>
 </body>
 </html>
