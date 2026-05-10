@@ -418,32 +418,60 @@ function Verticals() {
 function Agenda() {
   const [ref, inView] = useInView();
   const rows = [
-    ['09:00', 'Registro y acreditación', 'Networking'],
-    ['09:30', 'Apertura institucional', 'Apertura'],
-    ['09:45', 'Keynote: Estado del Arte de la IA Agéntica', 'Keynote', true],
-    ['10:30', 'Guardrails, Compliance y Regulación', 'Sesión'],
-    ['11:15', 'Networking Coffee', 'Pausa'],
-    ['11:45', 'Federated Learning y Privacidad de Datos', 'Sesión'],
-    ['12:30', 'Arquitecturas del Conocimiento', 'Sesión'],
-    ['13:15', 'Panel: Futuro del Software y Ciberseguridad', 'Panel'],
-    ['14:00', 'Cóctel y Networking', 'Networking', true],
+    { type: 'row',   data: ['09:00', 'Acreditaciones', 'Apertura'] },
+    { type: 'row',   data: ['09:30', 'Bienvenida institucional', 'Bienvenida · 15 min'] },
+    { type: 'block', label: 'BLOQUE I · SABER', sub: 'Ecosistema formativo', color: '#06D6A0' },
+    { type: 'row',   data: ['09:45', 'Observatorio de IA Agéntica en Servicios Financieros', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['10:00', 'Democratizando la Formación y Capacitación en IA', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['10:15', 'Creando itinerarios avanzados para Dptos. de IA a la vanguardia', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['10:30', '🔥 Fireside Talk Bloque I · Micrófono Abierto · Chatham House', 'Fireside Talk', true] },
+    { type: 'row',   data: ['11:00', 'Pausa café networking', 'Pausa · 30 min'] },
+    { type: 'block', label: 'BLOQUE II · HACER', sub: 'Tecnológicas y consultoras', color: '#6366F1' },
+    { type: 'row',   data: ['11:30', 'Consultoría en IA Agéntica — Lo que no sale en ningún RFP', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['11:45', 'Caso de éxito: colaboración Startup de IA con Gran Corporación', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['12:00', 'Caso de éxito en el Sandbox Financiero Español', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['12:15', '🔥 Fireside Talk Bloque II · Micrófono Abierto · Chatham House', 'Fireside Talk', true] },
+    { type: 'block', label: 'BLOQUE III · LIDERAR', sub: 'Casos en producción', color: '#F59E0B' },
+    { type: 'row',   data: ['12:45', 'Cambio Cultural en la Nueva Era del trabajo híbrido humano-máquina', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['13:00', 'Convivencia con las nuevas especies de esta Nueva Era de IA Agéntica', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['13:15', '🔥 Fireside Talk Bloque III · Micrófono Abierto · Chatham House', 'Fireside Talk', true] },
+    { type: 'row',   data: ['13:45', 'Conclusiones + presentación del Informe Post-Foro', 'Cierre · 15 min'] },
+    { type: 'row',   data: ['14:00', '🍷 Vino español · Networking de cierre', 'Networking', true] },
+    { type: 'row',   data: ['15:00', '☕ Café de Despedida', 'Networking · hasta las 15:30'] },
   ];
   return (
     <section className="section" id="agenda" ref={ref}>
       <div className={`container reveal ${inView ? 'in-view' : ''}`}>
         <div className="section-header">
-          <span className="eyebrow">Agenda · 16 de junio</span>
-          <h2>Una jornada de alto nivel diseñada para la acción.</h2>
-          <p className="lead">Ponencias de 30 minutos con Q&amp;A abierto. El programa recoge retos técnicos y sectoriales propuestos por las entidades participantes. Material para conversar — no para vender.</p>
+          <span className="eyebrow">Agenda · 16 de junio · 09:00–15:30</span>
+          <h2>Tres bloques. Tres perspectivas. Un ecosistema.</h2>
+          <p className="lead">Presentaciones de 15 minutos seguidas de Fireside Talk con micrófono abierto y Chatham House tras cada bloque. Sin pitches, sin slides de ventas — solo conversación real entre quienes deciden.</p>
         </div>
         <div className="agenda-table">
-          {rows.map(([time, title, tag, highlight], i) => (
-            <div className={`agenda-row ${highlight ? 'highlight' : ''}`} key={i}>
-              <div className="agenda-time">{time}</div>
-              <div className="agenda-title">{title}</div>
-              <div className="agenda-tag">{tag}</div>
-            </div>
-          ))}
+          {rows.map((item, i) => {
+            if (item.type === 'block') {
+              return (
+                <div key={i} style={{
+                  display: 'flex', alignItems: 'center', gap: 12,
+                  padding: '10px 16px', margin: '20px 0 6px',
+                  borderLeft: `3px solid ${item.color}`,
+                  background: `${item.color}18`,
+                  borderRadius: '0 8px 8px 0'
+                }}>
+                  <span style={{ fontFamily: 'var(--ff-display)', fontWeight: 700, fontSize: 12, letterSpacing: '0.1em', textTransform: 'uppercase', color: item.color }}>{item.label}</span>
+                  <span style={{ fontSize: 12, color: 'var(--ink-3)', fontStyle: 'italic' }}>{item.sub}</span>
+                </div>
+              );
+            }
+            const [time, title, tag, highlight] = item.data;
+            return (
+              <div className={`agenda-row ${highlight ? 'highlight' : ''}`} key={i}>
+                <div className="agenda-time">{time}</div>
+                <div className="agenda-title">{title}</div>
+                <div className="agenda-tag">{tag}</div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
