@@ -88,7 +88,7 @@ function Nav({ vertical }) {
           </a>
           <div className="nav-links">
             <a href="#foro">El Foro</a>
-            <a href="#verticales">Verticales</a>
+            <a href="#verticales">Programa</a>
             <a href="#agenda">Agenda</a>
             <a href="#paquetes">Paquetes</a>
             <a href="#reservar" className="btn btn-ghost btn-sm">Hablar con el equipo <IconArrow /></a>
@@ -379,33 +379,74 @@ function Video() {
   );
 }
 
-// ---------- Verticales ----------
+// ---------- Programa (bloques) ----------
 function Verticals() {
   const [ref, inView] = useInView();
-  const items = [
-    ['Estado del Arte de la IA Agéntica', 'Panorama global de los agentes de IA: dónde estamos, hacia dónde vamos y qué impacto real están teniendo en banca, seguros y distribución. Casos en producción, benchmarks y lecciones aprendidas — donde la audiencia decide qué adopta.'],
-    ['Guardrails, Compliance y Regulación', 'Cómo diseñar sistemas de IA Agéntica que cumplan con AI Act, DORA y normativa sectorial. Frameworks de gobernanza, auditoría algorítmica y control humano: el primer filtro de cualquier vendor briefing serio.'],
-    ['Federated Learning y Privacidad', 'Entrenamiento colaborativo de modelos sin compartir datos sensibles de pólizas, siniestros o cartera. La arquitectura técnica que cualquier proveedor debe entender para vender al sector.'],
-    ['Arquitecturas del Conocimiento', 'RAG, grafos de conocimiento y sistemas multiagente: las arquitecturas técnicas detrás de los agentes que el sector evaluará en los próximos doce meses.'],
-    ['Futuro de los Servicios de Software', 'Cómo la IA Agéntica redefine los modelos de negocio SaaS, la relación proveedor-cliente y la cadena de valor tecnológica del sector financiero y asegurador.'],
-    ['Ciberseguridad e IA Agéntica', 'Nuevos vectores de amenaza que introducen los agentes autónomos y estrategias de defensa. Seguridad ofensiva y defensiva: el otro frente que cualquier RFP del sector va a evaluar.'],
+  const blocks = [
+    {
+      num: '01',
+      label: 'BLOQUE I · SABER',
+      sub: 'Ecosistema formativo',
+      color: '#06D6A0',
+      desc: 'El conocimiento como punto de partida. Tres voces del mundo académico e institucional presentan el estado real de la formación en IA Agéntica para el sector financiero y asegurador.',
+      sessions: [
+        'Observatorio de IA Agéntica en Servicios Financieros',
+        'Democratizando la Formación y Capacitación en IA',
+        'Creando itinerarios avanzados para Dptos. de IA a la vanguardia',
+      ],
+    },
+    {
+      num: '02',
+      label: 'BLOQUE II · HACER',
+      sub: 'Tecnológicas y consultoras',
+      color: '#6366F1',
+      desc: 'La implementación como diferencial. Tres casos desde dentro: lo que no aparece en el RFP, lo que ocurre cuando una startup y una corporación trabajan juntas, y lo que ha superado el filtro regulatorio.',
+      sessions: [
+        'Consultoría en IA Agéntica — Lo que no sale en ningún RFP',
+        'Caso de éxito: colaboración Startup de IA con Gran Corporación',
+        'Caso de éxito en el Sandbox Financiero Español',
+      ],
+    },
+    {
+      num: '03',
+      label: 'BLOQUE III · LIDERAR',
+      sub: 'Casos en producción',
+      color: '#F59E0B',
+      desc: 'El liderazgo como resultado. Dos perspectivas sobre lo que cambia de verdad cuando los agentes autónomos ya no son un proyecto piloto sino parte del trabajo diario.',
+      sessions: [
+        'Cambio Cultural en la Nueva Era del trabajo híbrido humano-máquina',
+        'Convivencia con las nuevas especies de esta Nueva Era de IA Agéntica',
+      ],
+    },
   ];
   return (
     <section className="section" id="verticales" ref={ref}>
       <div className={`container reveal ${inView ? 'in-view' : ''}`}>
         <div className="section-header">
           <span className="eyebrow">Programa</span>
-          <h2>Seis verticales temáticas.</h2>
-          <p className="lead">El programa cubre los temas técnicos donde la IA Agéntica define su adopción real en el sector financiero y asegurador. Las entidades tecnológicas participantes pueden proponer retos técnicos al comité de programa.</p>
+          <h2>Tres bloques. Ocho sesiones.</h2>
+          <p className="lead">El programa articula el ecosistema completo de la IA Agéntica en tres ejes: quién forma, quién implementa y quién lidera en producción. Cada bloque cierra con Fireside Talk de micrófono abierto bajo Chatham House.</p>
         </div>
-        <div className="verticals-grid">
-          {items.map(([title, desc], i) => (
-            <div className="vertical-card" key={i}>
-              <div className="vertical-num">0{i + 1}</div>
-              <div className="vertical-content">
-                <h3>{title}</h3>
-                <p>{desc}</p>
+        <div className="verticals-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
+          {blocks.map((block, i) => (
+            <div className="vertical-card" key={i} style={{ borderTop: `3px solid ${block.color}`, display: 'flex', flexDirection: 'column', gap: 16 }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 10, marginBottom: 4 }}>
+                  <span className="vertical-num">{block.num}</span>
+                  <span style={{ fontFamily: 'var(--ff-display)', fontWeight: 700, fontSize: 11, letterSpacing: '0.1em', textTransform: 'uppercase', color: block.color }}>{block.label}</span>
+                </div>
+                <div style={{ fontSize: 12, color: 'var(--ink-3)', fontStyle: 'italic', marginBottom: 10 }}>{block.sub}</div>
+                <p style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{block.desc}</p>
               </div>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 0 }}>
+                {block.sessions.map((s, j) => (
+                  <li key={j} style={{ fontSize: 13, color: 'var(--ink-1)', padding: '8px 0', borderBottom: '1px solid var(--line)', display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+                    <span style={{ color: block.color, flexShrink: 0 }}>›</span>
+                    {s}
+                  </li>
+                ))}
+              </ul>
+              <div style={{ fontSize: 12, color: block.color, fontStyle: 'italic' }}>🔥 Fireside Talk · Micrófono Abierto · Chatham House</div>
             </div>
           ))}
         </div>
@@ -796,7 +837,7 @@ function Footer({ vertical }) {
             <ul>
               <li><a href="#foro">El Foro</a></li>
               <li><a href="#agenda">Agenda</a></li>
-              <li><a href="#verticales">Verticales</a></li>
+              <li><a href="#verticales">Programa</a></li>
             </ul>
           </div>
           <div>
