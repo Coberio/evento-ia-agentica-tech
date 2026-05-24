@@ -77,7 +77,7 @@ function Nav({ vertical }) {
   return (
     <>
       <div className="urgency-strip">
-        Plazas de participación muy limitadas · <strong>Edición inaugural · 16 de junio</strong> · Auditorio El Beatriz, Madrid
+        Plazas de participación muy limitadas · <strong>Edición inaugural · 20 de octubre</strong> · Auditorio El Beatriz, Madrid
       </div>
       <nav className={`nav ${scrolled ? 'scrolled' : ''}`} aria-label="Navegación principal">
         <div className="nav-inner">
@@ -101,7 +101,7 @@ function Nav({ vertical }) {
 
 // ---------- Hero ----------
 function Hero({ vertical }) {
-  const diff = useCountdown('2026-06-16T09:00:00+02:00');
+  const diff = useCountdown('2026-10-20T09:00:00+02:00');
   return (
     <section className="hero" id="top">
       <div className="hero-grid"></div>
@@ -120,7 +120,7 @@ function Hero({ vertical }) {
             <div className="hero-meta">
               <div>
                 <span className="label">Fecha</span>
-                <span className="value">16 Junio 2026</span>
+                <span className="value">20 Octubre 2026</span>
               </div>
               <div>
                 <span className="label">Lugar</span>
@@ -484,7 +484,7 @@ function Agenda() {
     <section className="section" id="agenda" ref={ref}>
       <div className={`container reveal ${inView ? 'in-view' : ''}`}>
         <div className="section-header">
-          <span className="eyebrow">Agenda · 16 de junio · 09:00–15:30</span>
+          <span className="eyebrow">Agenda · 20 de octubre · 09:00–15:30</span>
           <h2>Tres bloques. Tres perspectivas. Un ecosistema.</h2>
           <p className="lead">Presentaciones de 15 minutos seguidas de Fireside Talk con micrófono abierto y Chatham House tras cada bloque. Sin pitches, sin slides de ventas — solo conversación real entre quienes deciden.</p>
         </div>
@@ -821,7 +821,7 @@ function Footer({ vertical }) {
               <span>IA Agéntica</span>
             </a>
             <p style={{ fontSize: 13, color: 'var(--ink-3)', maxWidth: 320, marginTop: 16 }}>
-              El primer foro de IA Agéntica para proveedores tecnológicos del sector financiero y asegurador en España. 16 de junio de 2026, Auditorio El Beatriz Madrid.
+              El primer foro de IA Agéntica para proveedores tecnológicos del sector financiero y asegurador en España. 20 de octubre de 2026, Auditorio El Beatriz Madrid.
             </p>
           </div>
           <div>
