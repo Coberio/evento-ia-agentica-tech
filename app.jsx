@@ -136,7 +136,7 @@ function Hero({ vertical }) {
               </div>
               <div>
                 <span className="label">Audiencia</span>
-                <span className="value">Banca · Seguros · Mediación</span>
+                <span className="value">Aseguradoras · Brokers · Ecosistema</span>
               </div>
             </div>
             <div className="hero-cta">
@@ -233,13 +233,13 @@ function AboutForo() {
         <div className="section-header">
           <span className="eyebrow">El Foro</span>
           <h2>El primer foro en España donde la <em style={{ fontStyle: 'italic' }}>IA Agéntica</em> deja de venderse y empieza a adoptarse.</h2>
-          <p className="lead">Un encuentro institucional diseñado para que los proveedores tecnológicos serios entren en conversación directa con los compradores reales del sector financiero y asegurador. Sin stands, sin pitches, sin ferias. Y precisamente por eso, la audiencia está aquí.</p>
+          <p className="lead">Un encuentro institucional diseñado para que los proveedores tecnológicos serios entren en conversación directa con los compradores reales del ecosistema asegurador y asegurador. Sin stands, sin pitches, sin ferias. Y precisamente por eso, la audiencia está aquí.</p>
         </div>
 
         <div className="reasons-grid">
           {[
             ['01', 'Liderazgo de criterio, no de caseta', 'La única plataforma en España donde el equipo técnico de vuestra compañía aporta criterio en mesa editorial — no en una charla comercial. La audiencia se lo toma en serio precisamente por la regla de la casa: nada de pitches.'],
-            ['02', 'Conversación con los compradores reales', '150 C-level de banca, seguros y mediación, todos con presupuesto IA en 2026. Mesa, roundtable y networking, no stand. Cinco a diez conversaciones reales con quienes deciden valen más que cien leads sin cualificar.'],
+            ['02', 'Conversación con los compradores reales', '150 profesionales del ecosistema asegurador con presupuesto IA en 2026. Mesa, roundtable y networking, no stand. Cinco a diez conversaciones reales con quienes deciden valen más que cien leads sin cualificar.'],
             ['03', 'Aportación editorial al programa', 'Un perfil técnico de vuestra compañía interviene en mesa o panel del foro, validado por el comité de programa. Reconocimiento como referente, no como sponsor. (Nivel Impulsora.)'],
             ['04', 'Inteligencia de mercado fuera de RFP', 'Lo que se escucha en una roundtable Chatham House con CIOs y Directores de Suscripción no aparece en ningún RFP. Feedback real sobre fricciones de adopción, exigencias del regulador y prioridades del comité de inversión.'],
             ['05', 'Co-posicionamiento en contexto editorial', 'Vuestra marca aparece junto a las tecnologías que el sector toma en serio. La diferenciación no se construye en una caseta: se construye en el contexto editorial donde se debate qué adopta el sector en 2026–2027.'],
@@ -305,7 +305,7 @@ function Moment() {
         <div className="moment-block">
           <span className="eyebrow" style={{ justifyContent: 'center' }}>2026–2027 · Punto de inflexión</span>
           <h2 style={{ marginTop: 24 }}>El momento de la <em style={{ fontStyle: 'italic' }}>adopción</em>.</h2>
-          <p>En 2026–2027 se decide qué stack de IA Agéntica entra en producción en banca, seguros y distribución española. Las tecnologías que entren en conversación directa con los decisores ahora fijarán el estándar. Las que se queden en ferias, competirán con las elegidas a posteriori.</p>
+          <p>En 2026–2027 se decide qué stack de IA Agéntica entra en producción en el sector asegurador español. Las tecnologías que entren en conversación directa con los decisores ahora fijarán el estándar. Las que se queden en ferias, competirán con las elegidas a posteriori.</p>
           <div className="highlight">Ser referente no es estar presente — es estar en mesa</div>
         </div>
       </div>
@@ -388,9 +388,9 @@ function Verticals() {
       label: 'BLOQUE I · SABER',
       sub: 'Ecosistema formativo',
       color: '#06D6A0',
-      desc: 'El conocimiento como punto de partida. Tres voces del mundo académico e institucional presentan el estado real de la formación en IA Agéntica para el sector financiero y asegurador.',
+      desc: 'El conocimiento como punto de partida. Tres voces del mundo académico e institucional presentan el estado real de la formación en IA Agéntica para el sector asegurador.',
       sessions: [
-        'Observatorio de IA Agéntica en Servicios Financieros',
+        'Observatorio de IA Agéntica en Seguros',
         'Democratizando la Formación y Capacitación en IA',
         'Creando itinerarios avanzados para Dptos. de IA a la vanguardia',
       ],
@@ -462,7 +462,7 @@ function Agenda() {
     { type: 'row',   data: ['09:00', 'Acreditaciones', 'Apertura'] },
     { type: 'row',   data: ['09:30', 'Bienvenida institucional', 'Bienvenida · 15 min'] },
     { type: 'block', label: 'BLOQUE I · SABER', sub: 'Ecosistema formativo', color: '#06D6A0' },
-    { type: 'row',   data: ['09:45', 'Observatorio de IA Agéntica en Servicios Financieros', 'Sesión · 15 min'] },
+    { type: 'row',   data: ['09:45', 'Observatorio de IA Agéntica en Seguros', 'Sesión · 15 min'] },
     { type: 'row',   data: ['10:00', 'Democratizando la Formación y Capacitación en IA', 'Sesión · 15 min'] },
     { type: 'row',   data: ['10:15', 'Creando itinerarios avanzados para Dptos. de IA a la vanguardia', 'Sesión · 15 min'] },
     { type: 'row',   data: ['10:30', '🔥 Fireside Talk Bloque I · Micrófono Abierto · Chatham House', 'Fireside Talk', true] },
@@ -528,7 +528,7 @@ function Audience() {
         <div className="section-header">
           <span className="eyebrow">Perfil de la Audiencia</span>
           <h2>150 decisores. <em style={{ fontStyle: 'italic' }}>100%</em> compradores reales.</h2>
-          <p className="lead">Si vendes IA Agéntica al sector financiero, asegurador o de mediación en España, esta es la sala donde están tus compradores. Cada inscripción está validada por el equipo de programa. Aforo limitado para garantizar networking real.</p>
+          <p className="lead">Si vendes IA Agéntica al sector asegurador, mediación o agencias de suscripción en España, esta es la sala donde están tus compradores. Cada inscripción está validada por el equipo de programa. Aforo limitado para garantizar networking real.</p>
         </div>
         <div className="audience-grid">
           <div className="audience-card">
@@ -821,7 +821,7 @@ function Footer({ vertical }) {
               <span>IA Agéntica</span>
             </a>
             <p style={{ fontSize: 13, color: 'var(--ink-3)', maxWidth: 320, marginTop: 16 }}>
-              El primer foro de IA Agéntica para proveedores tecnológicos del sector financiero y asegurador en España. 20 de octubre de 2026, Auditorio El Beatriz Madrid.
+              El primer foro de IA Agéntica para proveedores tecnológicos del sector asegurador en España. 20 de octubre de 2026, Auditorio El Beatriz Madrid.
             </p>
           </div>
           <div>
