@@ -360,14 +360,14 @@ function Video() {
     <section className="section" id="video" ref={ref}>
       <div className={`container-narrow reveal ${inView ? 'in-view' : ''}`}>
         <div className="section-header center">
-          <span className="eyebrow" style={{ justifyContent: 'center' }}>El Foro · Diciembre 2026 · Madrid</span>
-          <h2>Así será el <em style={{ fontStyle: 'italic' }}>I Foro de IA Agéntica en Seguros</em>.</h2>
-          <p className="lead" style={{ margin: '0 auto' }}>Qué es este foro, a quién reúne y por qué el sector asegurador necesita esta conversación. En el Auditorio El Beatriz, Madrid.</p>
+          <span className="eyebrow" style={{ justifyContent: 'center' }}>El Auditorio · Madrid</span>
+          <h2>El mejor lugar para <em style={{ fontStyle: 'italic' }}>celebrar este foro</em>.</h2>
+          <p className="lead" style={{ margin: '0 auto' }}>Un recorrido por El Beatriz, el auditorio que hemos elegido para acoger esta primera edición. El espacio también forma parte del mensaje.</p>
         </div>
         <div className="video-frame">
           <iframe
             src="https://www.youtube-nocookie.com/embed/OOfGBCzqW88?rel=0&modestbranding=1"
-            title="I Foro IA Agéntica - Diciembre 2026"
+            title="Recorrido por el Auditorio El Beatriz"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
